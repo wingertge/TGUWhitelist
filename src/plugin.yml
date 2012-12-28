@@ -1,0 +1,38 @@
+name: TGUWhiteList
+main: com.TGU.WhitelistPlugin.WhitelistPlugin
+version: 1.0
+website: http://www.tgu-gaming.com
+author: Todkommt
+description: >
+             Fill me.
+commands:
+    ban:
+        description: Ban a player.
+    unban:
+        description: Unban a player.
+    permban:
+        description: Permanently ban a player.
+permissions:
+    TGU.LevelIV:
+        description: Gives permission to superadmin stuff.
+        default: op
+        children:
+            TGU.LevelIII: true
+    TGU.LevelIII:
+        description: Gives permission to admin stuff.
+        default: op
+        children:
+            TGU.LevelII: true
+    TGU.LevelII:
+        description: Gives permission to moderator stuff
+        default: op
+        children:
+            TGU.member: true
+    TGU.member:
+        description: Gives permission to member stuff
+        default: op
+        children:
+            TGU.guest: true
+    TGU.guest:
+        description: Gives permission to guest stuff
+        default: op
